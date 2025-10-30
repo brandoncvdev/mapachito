@@ -1,7 +1,3 @@
-import { Component } from "./component";
-import { Router } from "./router";
-
-export const mapachito = {
-  Component,
-  Router,
-};
+export { Component } from './component/component';
+export { Router } from './router/router';
+export * from './types';
