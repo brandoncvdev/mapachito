@@ -1,0 +1,39 @@
+{
+  "name": "mapachito",
+  "version": "1.0.0",
+  "description": "Mini Framework For UI and Animation",
+  "main": "dist/mapachito.umd.js",
+  "module": "dist/mapachito.es.js",
+  "type": "module",
+  "types": "dist/mapachito.d.ts",
+  "devDependencies": {
+    "@types/node": "^24.9.2",
+    "typescript": "^5.5.0",
+    "vite": "^5.0.0",
+    "vitest": "^1.6.1"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && npm run build:types",
+    "build:types": "tsc --emitDeclarationOnly --declaration --outDir dist",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "vanilla",
+    "typescript",
+    "microframework",
+    "frontend"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandoncvdev/mapachito.git"
+  },
+  "author": "Brandon Castillo Villa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brandoncvdev/mapachito/issues"
+  },
+  "homepage": "https://github.com/brandoncvdev/mapachito#readme"
+}
