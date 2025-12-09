@@ -5,11 +5,10 @@
   "main": "dist/mapachito.umd.js",
   "module": "dist/mapachito.es.js",
   "type": "module",
-  "types": "dist/mapachito.d.ts",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/mapachito.es.js",
-      "require": "./dist/mapachito.umd.js",
       "types": "./dist/index.d.ts"
     }
   },

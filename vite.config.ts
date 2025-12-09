@@ -6,19 +6,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig({
-  // test: {
-  //   environment: 'jsdom',
-  //   globals: true,
-  // },
-
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'mapachito',
+      formats: ['es', 'umd'],
       fileName: (format) => `mapachito.${format}.js`,
     },
     rollupOptions: {
-      // No incluimos dependencias externas
       external: [],
       output: {
         globals: {},
