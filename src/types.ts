@@ -4,6 +4,7 @@ export interface RouteConfig {
   path: string;
   title?: string;
   component: new (selector: HTMLElement | string) => Component;
+  canActivate?: () => boolean | Promise<boolean>;
 }
 export type ComponentProps = Record<string, any>;
 

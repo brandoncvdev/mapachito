@@ -1,5 +1,5 @@
 export abstract class Component<T = any> {
-  protected el: HTMLElement;
+  public el: HTMLElement;
   protected props: T;
 
   constructor(selector: string | HTMLElement, props?: T) {
@@ -17,20 +17,16 @@ export abstract class Component<T = any> {
     this.props = props ?? ({} as T);
   }
 
-  /** Método abstracto que cada componente debe implementar */
   abstract render(): void;
 
-  /** Renderiza HTML controlado (con sanitización básica) */
   protected setHTML(html: string) {
     this.el.innerHTML = this.safeHTML(html);
   }
 
-  /** Renderiza texto literal (sin HTML) */
   protected setText(text: string) {
     this.el.textContent = text;
   }
 
-  /** Sanea etiquetas peligrosas y atributos tipo onClick */
   private safeHTML(input: string): string {
     const div = document.createElement("div");
     div.innerHTML = input;
@@ -51,15 +47,14 @@ export abstract class Component<T = any> {
     return div.innerHTML;
   }
 
-  /** Monta el componente */
   mount() {
     this.render();
     this.onMount?.();
   }
 
-  /** Desmonta el componente (opcional) */
   unmount?(): void;
-
-  /** Callback posterior al montaje (opcional) */
+  onEnter?(path?: string): void;
   onMount?(): void;
+  onLeave?(): void;
+  onDestroy?(): void;
 }
