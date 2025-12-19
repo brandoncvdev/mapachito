@@ -4,5 +4,4 @@ vitest.config.*
 vite.config.*
 tsconfig.json
 *.log
-*.ts
 node_modules/

@@ -1,6 +1,6 @@
 {
   "name": "mapachito",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Mini Framework For UI and Animation",
   "main": "dist/mapachito.umd.js",
   "module": "dist/mapachito.es.js",
